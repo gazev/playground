@@ -28,9 +28,9 @@ class ListeningPeer(Player):
         self.symbol = "X"
 
     def initialize(self):
+        print(f"Listening on {IP}")
         print("Waiting for opponent\n")
 
-        print(socket.gethostbyaddr(socket.gethostname())[2][0])
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind((IP, PORT))
 
